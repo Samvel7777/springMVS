@@ -27,6 +27,7 @@ public class MainController {
         modelMap.addAttribute("users", userService.findAll());
         modelMap.addAttribute("books", bookRepository.findAll());
         modelMap.addAttribute("msg", msg);
+        modelMap.addAttribute("username", username);
         return "home";
     }
 

@@ -1,5 +1,6 @@
 package am.itspace.springdemo.config;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -37,6 +38,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .roles("ADMIN");
     }
 
+    @Bean
     public PasswordEncoder encoder() {
         return new BCryptPasswordEncoder();
     }
